@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Info</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">当前网页</p>
+          <h1>基础信息</h1>
+        </div>
+        <button id="refreshButton" class="icon-button" type="button" title="刷新">
+          <span aria-hidden="true">&#8635;</span>
+        </button>
+      </header>
+
+      <section id="status" class="status">正在读取页面信息...</section>
+
+      <section id="content" class="content" hidden>
+        <dl class="info-list">
+          <div>
+            <dt>标题</dt>
+            <dd id="pageTitle"></dd>
+          </div>
+          <div>
+            <dt>网址</dt>
+            <dd id="pageUrl" class="break-word"></dd>
+          </div>
+          <div>
+            <dt>域名</dt>
+            <dd id="hostname"></dd>
+          </div>
+          <div>
+            <dt>协议</dt>
+            <dd id="protocol"></dd>
+          </div>
+          <div>
+            <dt>路径</dt>
+            <dd id="pathname" class="break-word"></dd>
+          </div>
+          <div>
+            <dt>页面语言</dt>
+            <dd id="language"></dd>
+          </div>
+          <div>
+            <dt>字符集</dt>
+            <dd id="charset"></dd>
+          </div>
+          <div>
+            <dt>描述</dt>
+            <dd id="description" class="break-word"></dd>
+          </div>
+          <div>
+            <dt>链接数量</dt>
+            <dd id="linkCount"></dd>
+          </div>
+          <div>
+            <dt>图片数量</dt>
+            <dd id="imageCount"></dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
