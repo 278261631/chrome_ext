@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Downloader</title>
+    <link rel="stylesheet" href="downloader.css">
+  </head>
+  <body>
+    <main class="download-shell">
+      <section class="download-panel">
+        <p class="eyebrow">Media Downloader</p>
+        <h1 id="title">Preparing task</h1>
+        <p id="sourceUrl" class="source-url"></p>
+
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <p id="statusText" class="status-text">Loading...</p>
+
+        <section class="log-panel">
+          <h2>Debug</h2>
+          <ol id="logList"></ol>
+        </section>
+      </section>
+    </main>
+
+    <script src="downloader.js"></script>
+  </body>
+</html>

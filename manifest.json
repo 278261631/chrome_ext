@@ -2,10 +2,14 @@
   "manifest_version": 3,
   "name": "Page Info Viewer",
   "version": "1.0.0",
-  "description": "Display basic information about the current web page.",
+  "description": "Display basic information and videos detected on the current web page.",
   "action": {
     "default_popup": "popup.html",
     "default_title": "Page Info"
   },
-  "permissions": ["activeTab", "scripting"]
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "downloads", "webRequest", "tabs"],
+  "host_permissions": ["<all_urls>"]
 }

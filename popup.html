@@ -10,61 +10,98 @@
     <main class="shell">
       <header class="header">
         <div>
-          <p class="eyebrow">当前网页</p>
-          <h1>基础信息</h1>
+          <p class="eyebrow">&#24403;&#21069;&#32593;&#39029;</p>
+          <h1>&#22522;&#30784;&#20449;&#24687;</h1>
         </div>
-        <button id="refreshButton" class="icon-button" type="button" title="刷新">
+        <button id="refreshButton" class="icon-button" type="button" title="&#21047;&#26032;">
           <span aria-hidden="true">&#8635;</span>
         </button>
       </header>
 
-      <section id="status" class="status">正在读取页面信息...</section>
+      <section class="actions" aria-label="video actions">
+        <button id="detectNowButton" class="primary-button" type="button">&#31435;&#21363;&#26816;&#27979;</button>
+        <button id="cacheButton" class="secondary-button" type="button" disabled>&#32531;&#23384;&#32467;&#26524;</button>
+      </section>
+
+      <section id="status" class="status">&#27491;&#22312;&#35835;&#21462;&#39029;&#38754;&#20449;&#24687;...</section>
 
       <section id="content" class="content" hidden>
         <dl class="info-list">
           <div>
-            <dt>标题</dt>
+            <dt>&#26631;&#39064;</dt>
             <dd id="pageTitle"></dd>
           </div>
           <div>
-            <dt>网址</dt>
+            <dt>&#32593;&#22336;</dt>
             <dd id="pageUrl" class="break-word"></dd>
           </div>
           <div>
-            <dt>域名</dt>
+            <dt>&#22495;&#21517;</dt>
             <dd id="hostname"></dd>
           </div>
           <div>
-            <dt>协议</dt>
+            <dt>&#21327;&#35758;</dt>
             <dd id="protocol"></dd>
           </div>
           <div>
-            <dt>路径</dt>
+            <dt>&#36335;&#24452;</dt>
             <dd id="pathname" class="break-word"></dd>
           </div>
           <div>
-            <dt>页面语言</dt>
+            <dt>&#39029;&#38754;&#35821;&#35328;</dt>
             <dd id="language"></dd>
           </div>
           <div>
-            <dt>字符集</dt>
+            <dt>&#23383;&#31526;&#38598;</dt>
             <dd id="charset"></dd>
           </div>
           <div>
-            <dt>描述</dt>
+            <dt>&#25551;&#36848;</dt>
             <dd id="description" class="break-word"></dd>
           </div>
           <div>
-            <dt>链接数量</dt>
+            <dt>&#38142;&#25509;&#25968;&#37327;</dt>
             <dd id="linkCount"></dd>
           </div>
           <div>
-            <dt>图片数量</dt>
+            <dt>&#22270;&#29255;&#25968;&#37327;</dt>
             <dd id="imageCount"></dd>
           </div>
         </dl>
+
+        <section class="video-section">
+          <div class="section-heading">
+            <h2>&#35270;&#39057;&#26816;&#27979;</h2>
+            <span id="videoCount" class="count-pill">0</span>
+          </div>
+          <p id="cacheInfo" class="cache-info"></p>
+          <div id="videoList" class="video-list"></div>
+        </section>
+
+        <section class="debug-section">
+          <details open>
+            <summary>Debug</summary>
+            <ol id="debugLog" class="debug-log"></ol>
+          </details>
+        </section>
       </section>
     </main>
+
+    <template id="videoItemTemplate">
+      <article class="video-item">
+        <div class="video-meta">
+          <h3></h3>
+          <p class="video-url"></p>
+          <p class="video-detail"></p>
+        </div>
+        <div class="video-actions">
+          <a class="open-link" target="_blank" rel="noreferrer">&#25171;&#24320;</a>
+          <button class="download-button" type="button">&#19979;&#36733;</button>
+          <button class="fetch-button" type="button">Fetch</button>
+          <button class="copy-command-button" type="button">Cmd</button>
+        </div>
+      </article>
+    </template>
 
     <script src="popup.js"></script>
   </body>

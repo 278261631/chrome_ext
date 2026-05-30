@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #162033;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+}
+
+.download-shell {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.download-panel {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #dfe6f2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #65748a;
+  font-size: 13px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.source-url {
+  margin: 12px 0 18px;
+  overflow-wrap: anywhere;
+  color: #52627a;
+  font-size: 13px;
+}
+
+.progress-track {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e7edf6;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  background: #1f6fb2;
+  transition: width 0.2s ease;
+}
+
+.status-text {
+  min-height: 22px;
+  margin: 12px 0 20px;
+  color: #334155;
+}
+
+.log-panel {
+  padding-top: 16px;
+  border-top: 1px solid #edf1f7;
+}
+
+ol {
+  max-height: 360px;
+  margin: 0;
+  padding: 12px 12px 12px 28px;
+  overflow: auto;
+  border: 1px solid #e5ebf4;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+li + li {
+  margin-top: 6px;
+}
